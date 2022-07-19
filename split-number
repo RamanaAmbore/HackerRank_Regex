@@ -1,0 +1,9 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/split-number/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+for _ in range(int(input())):
+    string = input()
+    grps= re.search('^(.+)[\s-](.+)[\s-](.+)$',string).groups()
+    print(f'CountryCode={grps[0]},LocalAreaCode={grps[1]},Number={grps[2]}')
