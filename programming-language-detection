@@ -1,0 +1,14 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/programming-language-detection/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+java_reg= r'.*class.+[{].*'
+c_reg= r'.*int\s+main.+'
+strings = ""
+while True:
+    try: strings += ' '+input()
+    except: break
+# print(strings)
+if re.search(java_reg,strings): print("Java")
+elif re.search(c_reg,strings): print("C")
+else: print("Python")
