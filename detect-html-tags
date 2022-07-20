@@ -1,0 +1,7 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/detect-html-tags/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+regx = r'[<]\s*(\w+)'
+rows = range(int(input()))
+print( ';'.join(sorted(list(set([j for _ in  rows for j in re.findall(regx,input())])))))
