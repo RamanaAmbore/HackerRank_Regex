@@ -1,0 +1,14 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/find-substring/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+
+strings=[input() for _ in  range(int(input()))]
+qry=[input() for _ in  range(int(input()))]
+
+for q in qry:
+    cnt=0
+    for s in strings:
+        cnt+= len(re.findall(r'\w+(%s)\w+'%(q), s)) 
+    print(cnt)
