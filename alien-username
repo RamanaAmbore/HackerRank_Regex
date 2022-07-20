@@ -1,0 +1,6 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/alien-username/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+rows = int(input())
+print('\n'.join(['VALID' if re.match(r'[_.]\d+[a-zA-Z]*[_]?$',input()) else 'INVALID' for _ in  range(rows)]))
