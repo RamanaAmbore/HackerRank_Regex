@@ -1,0 +1,13 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/ip-address-validation/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+ip4=r'^(([0-1]?\d?\d|2(?:[0-4]\d|5[0-5]))[.]?){4}$'
+ip6=r'^([0-9a-fA-f]{1,4}[:]?){8}$'
+
+for _ in  range(int(input())):
+    line=input()
+    if re.match(ip6,line): print('IPv6')
+    elif re.match(ip4,line): print('IPv4')
+    else: print('Neither')
