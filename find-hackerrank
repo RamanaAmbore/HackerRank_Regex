@@ -1,0 +1,19 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/find-hackerrank/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+
+for _ in range(int(input())):
+    txt = input()
+    if re.match(r'hackerrank*',txt):
+        if re.match(r'.*hackerrank$',txt):
+            print(0)
+        else:
+            print(1)
+    else:
+        if re.match(r'.*hackerrank$',txt):
+            print(2)
+        else:
+            print(-1)
+        
