@@ -1,0 +1,7 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/detect-the-email-addresses/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+txt = ' '.join([input() for _ in range(int(input()))])
+print(';'.join(sorted(set((re.findall(r'[\w.]+?[@][\w.]+\w',txt))))))
