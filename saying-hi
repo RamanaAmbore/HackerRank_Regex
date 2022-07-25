@@ -1,0 +1,8 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/saying-hi/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+for _ in range(int(input())):
+    grp=re.match(r'[Hh][Ii]\s[^Dd].*$',input())
+    if grp: print (grp.group())
