@@ -1,0 +1,8 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/detect-the-domain-name/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+txt = '\n'.join([input() for _ in range(int(input()))])
+regx = r'https?[:]\/\/(?:www\.|ww2\.)?((?:(?:[-a-z0-9]+[.])+)[-a-z0-9]+)'
+print(';'.join(sorted(set(re.findall(regx,txt)))))
