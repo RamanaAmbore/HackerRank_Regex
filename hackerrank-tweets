@@ -1,0 +1,7 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/hackerrank-tweets/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+
+print(sum([1 if re.search(r'.*hackerrank.*',input(),re.I) else 0 for _ in range(int(input()))]))
