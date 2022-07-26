@@ -1,0 +1,7 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/utopian-identification-number/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+for _ in range(int(input())):
+    print('VALID' if re.match(r'[a-z]{0,3}\d{2,8}[A-Z]{3,}$',input()) else 'INVALID' )
