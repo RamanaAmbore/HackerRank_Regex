@@ -1,0 +1,13 @@
+# HackerRank Problem link: https://www.hackerrank.com/challenges/stack-exchange-scraper/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+txt=''
+regx=r'question-summary-(\w\w\w\w\w)".*?class="question-hyperlink">(.+?)</a>.*?class=\"relativetime\">(.+?)</span>'
+while (True):
+    try:
+        txt = txt + '\n'+input()
+    except:
+        break;
+for i in re.findall(regx,txt,re.DOTALL):
+    print(';'.join(i))
