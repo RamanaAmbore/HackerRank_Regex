@@ -1,0 +1,11 @@
+# HakcerRank problem link: https://www.hackerrank.com/challenges/detect-html-links/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+regx = r'<a\s+href\=[\"\']([^\"\']+).*?\>(.*?)<\/a'
+
+for _ in range(int(input())):
+    for link,ttl in re.findall(regx,input()) :
+        ttl = re.sub(r'\<.*?\>','',ttl).strip()
+        print(f'{link},{ttl}')
