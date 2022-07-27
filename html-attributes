@@ -1,0 +1,20 @@
+#HackerRank link: https://www.hackerrank.com/challenges/html-attributes/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+from collections import defaultdict
+regx = r'\<\s*(\w+)(?:\s+(.*?)\s*)?\>'
+reg_att = r'([a-zA-Z0-9]+)\=[\"\']'
+
+
+grps=defaultdict(set)
+for _ in range(int(input())):
+    for tag,atts in re.findall(regx,input()):
+        grps[tag].add('')
+
+        for att in re.findall(reg_att,atts):
+                grps[tag].add(att)
+
+for key in sorted(grps):
+    print(f'{key}:{",".join(sorted(grps[key]))[1:]}')
