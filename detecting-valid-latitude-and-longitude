@@ -1,0 +1,12 @@
+# HakcerRank challenge problem link: https://www.hackerrank.com/challenges/detecting-valid-latitude-and-longitude/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+ln = r'([-+]?((90(\.0+)?)|([1-8]\d|\d)(\.\d+)?))'
+lt = r'([-+]?((180(\.0+)?)|(1[0-7]\d|[1-9]\d|\d)(\.\d+)?))'
+regx = r'\(%s\, %s\)$'%(ln,lt)
+
+for _ in  range(int(input())):
+    if re.match(regx,input()): print('Valid')
+    else: print ('Invalid')
