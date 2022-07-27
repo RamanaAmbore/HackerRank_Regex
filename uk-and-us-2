@@ -1,0 +1,11 @@
+# HakcerRank challenge problem link: https://www.hackerrank.com/challenges/uk-and-us-2/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+txt = ''
+for _ in range(int(input())): txt=f'{txt} {input()}'
+for _ in range(int(input())):
+    tkn = input().replace('our','ou?r')
+    regx= r'\b%s\b'%tkn
+    print(len(re.findall(regx,txt)))
