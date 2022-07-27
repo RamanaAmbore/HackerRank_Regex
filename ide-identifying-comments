@@ -1,0 +1,13 @@
+# HakcerRank challenge problem link: https://www.hackerrank.com/challenges/ide-identifying-comments/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re 
+regx = r'(?s)(?m)(/\*.*?\*/|//.*?$)'
+txt=''
+while True:
+    try:
+        txt = f'{txt}\n{input().strip()}'
+    except:
+        break
+for cmnt in re.findall(regx,txt):
+    print(cmnt)
