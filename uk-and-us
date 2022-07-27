@@ -1,0 +1,10 @@
+# HakcerRank challenge problem link: https://www.hackerrank.com/challenges/uk-and-us/problem
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+txt = ''
+for _ in range(int(input())): txt=f'{txt} {input()}'
+for _ in range(int(input())):
+    regx= r'\b%s(?:s|z)e\b'%input()[:-2]
+    print(len(re.findall(regx,txt)))
